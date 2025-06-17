@@ -1,10 +1,9 @@
 import express, { Request,Response } from "express";
+import pingCheck from "../../controller";
 
 const v1Routes = express.Router();
 
 
-v1Routes.get('/ping',(_ :Request,res:Response)=>{
-    res.json({msg:"PONG"})
-})
+v1Routes.get('/ping',pingCheck)
 
 export default v1Routes
