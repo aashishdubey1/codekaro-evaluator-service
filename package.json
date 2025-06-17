@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "prebuild":"npm run lint:fix",
     "build": "npx tsc",
     "watch": "npx tsc -w",
     "prerestart": "npm run build",
