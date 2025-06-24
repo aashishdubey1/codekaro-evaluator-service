@@ -2,8 +2,13 @@ import express, {Express} from 'express';
 import serverConfig from './config/server-config';
 import apiRoutes from './routes/inedex';
 import addJob from './producers/SampleQueueProducer';
-import sampleWorker from './workers/sampleWorkers';
+import sampleWorker from './workers/SampleWorkers';
 const app:Express = express();
+
+
+app.use(express.json())
+app.use(express.urlencoded({extended:true}));
+app.use(express.text())
 
 
 app.use('/api',apiRoutes);

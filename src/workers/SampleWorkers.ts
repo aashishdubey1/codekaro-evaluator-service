@@ -12,7 +12,6 @@ export default function sampleWorker (queueName:string){
                 const sampleJobInstance = new SampleJob(job.data)
                 sampleJobInstance.handle(job)
                 return true;
-
             }
         },
         {
